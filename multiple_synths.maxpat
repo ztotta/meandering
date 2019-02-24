@@ -45,6 +45,50 @@
 					"enablehscroll" : 0,
 					"enablevscroll" : 0,
 					"extract" : 1,
+					"id" : "obj-60",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "bp.LFO.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 5,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "signal", "signal", "signal", "signal", "signal" ],
+					"patching_rect" : [ 245.33331298828125, 500.99993896484375, 137.0, 116.0 ],
+					"varname" : "bp.LFO[2]",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"extract" : 1,
+					"id" : "obj-59",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "bp.Waveshaper.maxpat",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 129.333328247070312, 500.99993896484375, 106.56890869140625, 116.0 ],
+					"varname" : "bp.Waveshaper",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"extract" : 1,
 					"id" : "obj-58",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
@@ -400,7 +444,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 1445.0, 621.00006103515625, 157.0, 116.0 ],
+					"patching_rect" : [ 801.0, 610.00006103515625, 157.0, 116.0 ],
 					"varname" : "bp.Global Transport",
 					"viewvisibility" : 1
 				}
@@ -517,7 +561,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-46", 0 ],
+					"destination" : [ "obj-59", 0 ],
 					"source" : [ "obj-48", 0 ]
 				}
 
@@ -566,6 +610,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-46", 0 ],
+					"source" : [ "obj-59", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-59", 1 ],
+					"source" : [ "obj-60", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-41", 0 ],
 					"source" : [ "obj-9", 0 ]
 				}
@@ -574,6 +632,7 @@
  ],
 		"parameters" : 		{
 			"obj-47::obj-29" : [ "Decay", "Decay", 0 ],
+			"obj-59::obj-53" : [ "Amount[1]", "Amount", 0 ],
 			"obj-48::obj-38" : [ "FilterType", "FilterType", 0 ],
 			"obj-33::obj-106" : [ "CV3", "CV3", 0 ],
 			"obj-39::obj-22" : [ "ch1_pan", "Pan", 0 ],
@@ -584,6 +643,7 @@
 			"obj-45::obj-130" : [ "mute", "mute", 0 ],
 			"obj-45::obj-25" : [ "GateTime", "GateTime", 0 ],
 			"obj-57::obj-1" : [ "divide[1]", "divide", 0 ],
+			"obj-60::obj-20" : [ "Frequency[2]", "Freq", 0 ],
 			"obj-9::obj-69" : [ "Lock", "Lock", 0 ],
 			"obj-39::obj-42" : [ "ch2_level", "2", 0 ],
 			"obj-48::obj-95" : [ "ResCV", "CV", 0 ],
@@ -604,6 +664,7 @@
 			"obj-57::obj-69" : [ "Lock[1]", "Lock", 0 ],
 			"obj-9::obj-1" : [ "divide", "divide", 0 ],
 			"obj-54::obj-27" : [ "Feedback[1]", "Feedback", 0 ],
+			"obj-60::obj-12" : [ "Mute[7]", "Mute", 0 ],
 			"obj-33::obj-107" : [ "Linear", "Linear", 0 ],
 			"obj-39::obj-55" : [ "ch4_pan", "Pan", 0 ],
 			"obj-48::obj-54" : [ "CV1", "CV1", 0 ],
@@ -614,12 +675,14 @@
 			"obj-58::obj-129" : [ "Points[2]", "Points", 0 ],
 			"obj-45::obj-157" : [ "Swing enable", "Swing enable", 0 ],
 			"obj-54::obj-96" : [ "delay_left", "delay_left", 0 ],
+			"obj-59::obj-44" : [ "bypass[2]", "bypass", 0 ],
 			"obj-54::obj-118" : [ "Mix[1]", "Mix", 0 ],
 			"obj-39::obj-53" : [ "ch3_mute", "Mute", 0 ],
 			"obj-33::obj-51" : [ "Freq", "Freq", 0 ],
 			"obj-39::obj-43" : [ "ch2_pan", "Pan", 0 ],
 			"obj-45::obj-185" : [ "Sequence", "Sequence", 0 ],
 			"obj-39::obj-64" : [ "ch3_level", "3", 0 ],
+			"obj-59::obj-22" : [ "CV", "CV", 0 ],
 			"obj-33::obj-36" : [ "PW", "PW", 0 ],
 			"obj-39::obj-86" : [ "ch7_pan", "Pan", 0 ],
 			"obj-45::obj-96" : [ "Pulse", "Pulse", 0 ],
@@ -799,6 +862,12 @@
 , 			{
 				"name" : "M4L.bal2~.maxpat",
 				"bootpath" : "C74:/patchers/m4l/Tools resources",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.Waveshaper.maxpat",
+				"bootpath" : "C74:/packages/BEAP/clippings/BEAP/Waveshapers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
